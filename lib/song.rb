@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -30,6 +32,7 @@ class Song
 
   def self.find_by_name(song)
     @@all.find {|matching_song| song == matching_song}
+    binding.pry
   end
 
   def self.find_or_create_by_name
