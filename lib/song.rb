@@ -29,7 +29,7 @@ class Song
   end
 
   def self.find_by_name(song)
-    Song.all.find {|matching_song| song == matching_song}
+    @@all.find {|matching_song| song == matching_song}
   end
 
   def self.find_or_create_by_name
